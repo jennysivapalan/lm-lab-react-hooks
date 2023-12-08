@@ -10,11 +10,19 @@ export const MemoExample = () => {
     [numberObj.input]
   );
 
+  function doubleInputNumber() {
+    const elem = document.getElementById("inputNum") as HTMLInputElement | null;
+    if (elem) {
+      setNumberObj({ input: Number(elem.value) });
+    }
+  }
+
   return (
     <>
       <h2>useMemo</h2>
+      <input type="text" id="inputNum"></input>
 
-      <button onClick={() => setNumberObj({ input: 3 })}>Double 3</button>
+      <button onClick={() => doubleInputNumber()}>Double input number</button>
 
       <p className="use-memo__text">{doubleNumber}</p>
     </>
