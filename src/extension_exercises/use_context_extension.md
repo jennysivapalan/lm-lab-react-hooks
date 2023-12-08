@@ -2,7 +2,7 @@
 
 If you have completed this challege AND all the other hook challenges... then you are ready to Level Up 💪
 
-You might have noticed in the `Parent` component the button element might be better off being its own separate component: 
+You might have noticed in the `Parent` component the button element might be better off being its own separate component:
 
 `<button onClick={toggleTheme}>Toggle Theme</button>`
 
@@ -33,4 +33,3 @@ You may also be thinking, having Theme logic in the parent component is ok.. but
 Good luck!
 
 If you get really stuck you can see a solution repo here:
-
