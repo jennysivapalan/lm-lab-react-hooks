@@ -1,14 +1,3 @@
-import { useState } from "react";
-import { AddTask } from "./add_task.js";
-import { TaskList } from "./task_list.js";
-import React, { useReducer } from "react";
-
-const initialTasks: Task[] = [
-  { id: 0, text: "Visit Kafka Museum", done: true },
-  { id: 1, text: "Watch a puppet show", done: false },
-  { id: 2, text: "Lennon Wall pic", done: false },
-];
-
 export interface Task {
   id: number;
   text: string;
@@ -48,21 +37,3 @@ export const taskReducer = (tasks: Task[], action: Action): Task[] => {
       return tasks;
   }
 };
-
-export function TaskApp() {
-  const [tasks, setTasks] = useState(initialTasks);
-
-  return (
-    <>
-      <h2>useReducer</h2>
-
-      <h3>Prague Itinerary</h3>
-      <AddTask onAddTask={handleAddTask} />
-      <TaskList
-        tasks={tasks}
-        onChangeTask={handleChangeTask}
-        onDeleteTask={handleDeleteTask}
-      />
-    </>
-  );
-}
