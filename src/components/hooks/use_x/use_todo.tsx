@@ -12,9 +12,7 @@ interface TodoResponse {
   completed: boolean;
 }
 
-const url = "https://jsonplaceholder.typicode.com/todos/1";
-
-export const useTodo = (): ToDoWrapper => {
+export function useTodo<T>(url: string) {
   const [data, setData] = useState<TodoResponse>();
 
   const [isFetching, setIsFetching] = useState(true);
@@ -37,4 +35,4 @@ export const useTodo = (): ToDoWrapper => {
   }, [url]);
 
   return { isFetching, data };
-};
+}
