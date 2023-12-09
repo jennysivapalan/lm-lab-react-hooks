@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 export const CountRenders = () => {
   const [value, setValue] = useState("");
-  let count = useRef(1);
+  const count = useRef(1);
 
   function handleInput(value: string) {
     setValue(value);
